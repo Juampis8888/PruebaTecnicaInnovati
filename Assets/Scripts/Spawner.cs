@@ -12,8 +12,6 @@ public class Spawner : MonoBehaviour
 
     public int maxEnemies = 10;
 
-    public float spawnRadius = 6f;
-
     private int enemiesSpawned = 0;
 
     public void CallSpawn()
