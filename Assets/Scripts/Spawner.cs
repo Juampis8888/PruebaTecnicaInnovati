@@ -9,7 +9,9 @@ public class Spawner : MonoBehaviour
     public GameObject[] enemyPrefab;
 
     public float spawnInterval = 2f;
+
     public int maxEnemies = 10;
+
     public float spawnRadius = 6f;
 
     private int enemiesSpawned = 0;
@@ -45,7 +47,7 @@ public class Spawner : MonoBehaviour
     }
 
     public float GetX()
-    {
-        return cameraController.transformPlayerController.position.x + Random.Range(50,60);
+    { 
+        return  cameraController.transformPlayerController.position.x + Random.Range(50,70); 
     }
 }

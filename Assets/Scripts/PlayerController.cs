@@ -104,6 +104,11 @@ public class PlayerController : MonoBehaviour
         keyAnimation = "Run";
     }
 
+    public void SetRun(bool Value)
+    {
+        isRun = Value;
+    }
+
     public bool GetRun()
     {
         return isRun;

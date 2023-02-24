@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
 
     private bool isCall = true;
 
+    private bool isGame = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,15 +35,21 @@ public class GameController : MonoBehaviour
     void Update()
     {   
         if(playerController.GetRun() & isCall)
-        {
+        {   
+            isGame = true;
             spawnEnemies.CallSpawn();
             isCall = false;
         }
 
         if(!playerController.GetRun() & !isCall)
-        {   
+        {  
             spawnEnemies.CancelSpawn();
             isCall = true;
+        }
+
+        if(playerController.GetDie() & isGame)
+        {
+            isGame = false;  
         }
     }
 
@@ -63,6 +71,11 @@ public class GameController : MonoBehaviour
     public int Getint(string KeyName)
     {
         return PlayerPrefs.GetInt(KeyName);
+    }
+
+    public bool GetIsGame()
+    {
+        return isGame;
     }
 
 }

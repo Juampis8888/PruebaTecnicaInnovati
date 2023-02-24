@@ -38,7 +38,7 @@ public class SpeechRecognition : MonoBehaviour
         KeywordAction.Add("levantarse", playerController.Rise);
         KeywordAction.Add("continuar", uiController.HidenTutorial);
         KeywordAction.Add("tutorial", uiController.ShowTutorial);
-        KeywordAction.Add("salir", gameController.Restart);
+        KeywordAction.Add("salir", gameController.Exit);
         KeywordAction.Add("reiniciar", gameController.Restart);
         recognizeWord = new KeywordRecognizer(KeywordAction.Keys.ToArray(), confidence);
         recognizeWord.OnPhraseRecognized += OnKeywordsRecognized;

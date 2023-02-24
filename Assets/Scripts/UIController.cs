@@ -7,6 +7,8 @@ public class UIController : MonoBehaviour
 {   
     public PlayerController playerController;
 
+    public GameController gameController;
+
     public GameObject tutorialGameObject;
 
     public GameObject titleGameObject;
@@ -70,8 +72,11 @@ public class UIController : MonoBehaviour
     }
 
     public void ShowTutorial()
-    {
-        tutorialGameObject.SetActive(true);
+    {   
+        if(!gameController.GetIsGame())
+        {
+            tutorialGameObject.SetActive(true);
+        }
     }
 
     public void HidenTitle()

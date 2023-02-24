@@ -13,7 +13,7 @@ public class ObstacleController : MonoBehaviour
 
     IEnumerator Start()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
         if(!playerController.GetDie())
         {
             Destroy(gameObject);
